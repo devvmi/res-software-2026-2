@@ -1,7 +1,7 @@
 // Funções utilizadas no projeto (importante - não apagar!)
 
 
-// Função utilizada p/ pegar horário do usuario BR
+// Função para pegar horário do usuario BR
 
 function exibirHoraFormatada() {
     var agora = new Date();
@@ -12,3 +12,17 @@ function exibirHoraFormatada() {
 }
 
 window.onload = exibirHoraFormatada; // Pesquisando vi que isso roda uma função assim que a pág abre
+
+
+// Função do botão "Começar agora" para o direcionamento de usuario
+
+function comecarAgora() {
+
+    var usuario = localStorage.getItem("nexus_usuario"); //Exemplo de teste
+
+    if (usuario !== null && usuario !== "") {
+        window.location.href = "dashboard.html";
+    } else {
+        window.location.href = "registro.html";
+    }
+}
