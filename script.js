@@ -1,26 +1,14 @@
-// funções utilizadas no projeto (importante - não apagar!)
+// Funções utilizadas no projeto (importante - não apagar!)
 
-function horaFormatada(horarioAtual){
 
-    var h = horarioAtual.getHours();
-    var m = horarioAtual.getMinutes();
-
-    if (h < 10){
-        h = "0" + h;
-    }
-
-    if (m < 10) {
-        m = "0" + m;
-    }
-
-    return h + ":" + m;
-}
+// Função utilizada p/ pegar horário do usuario BR
 
 function exibirHoraFormatada() {
-    var horarioAtual = new Date();
-    var exibirHoraFormatada = horaFormatada(horarioAtual);
+    var agora = new Date();
+    var horaBrasil = agora.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
 
-    document.getElementById("atualizacao").innerHTML = "Atualizado hoje, às " + exibirHoraFormatada;
+    // Exibe somente a hora na tela
+    document.getElementById("atualizacao").innerHTML = horaBrasil;
 }
 
 window.onload = exibirHoraFormatada; // Pesquisando vi que isso roda uma função assim que a pág abre
