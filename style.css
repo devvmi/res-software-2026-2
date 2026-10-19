@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --bg-color-primary: #0D0125;
+    --font-color-primary: #FFF8EE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    color: var(--font-color-primary);
+}
+
+header {
+    background-color: var(--bg-color-primary);
+    padding-left: 72px;
+    padding-right: 72px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    background-color: var(--bg-color-primary);
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    margin: 22.65px 0px 22.65px 0px;
+    flex-direction: row;
+}
+
+.menu-top .menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 34px;
+}
+
+.menu-top .menu li a{
+    text-decoration: none;
+}
+
+.acesso {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.acesso a {
+    text-decoration: none;
+}
+
+#apresentacao {
+    display: flex;
+    min-height: 620px;
+    padding: 72px 72px 72px 72px;
+    align-items: center;
+    gap: 72px;
+}
+
+#apresentacao .cta {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#apresentacao .cta h2 {
+    font-size: 64px;
+    line-height: 104%;
+    font-weight: 400;
+    text-wrap: balance;
+}
+
+#apresentacao .cta h2 span {
+    color: #FF65C3;
+}
+
+#apresentacao .cta p {
+    color: #c9c3e0;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
+#apresentacao .previa{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--font-color-primary);
+    min-width: 458px;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 32px;
+}
+
+#apresentacao .previa * {
+    color: var(--bg-color-primary);
+}
+
+#apresentacao .previa .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#apresentacao .previa .top .identificacao {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+#apresentacao .previa .top .identificacao .user{
+    color: #6D6274;
+    font-size: 11px;
+}
