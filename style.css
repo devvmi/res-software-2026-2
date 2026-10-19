@@ -3,6 +3,7 @@
 :root {
     --bg-color-primary: #0D0125;
     --font-color-primary: #FFF8EE;
+    --font-color-secundary: #C8BAD6;
 }
 
 * {
@@ -23,10 +24,6 @@ header {
     justify-content: space-between;
 }
 
-main {
-    background-color: var(--bg-color-primary);
-}
-
 .logo {
     display: flex;
     gap: 12px;
@@ -34,14 +31,14 @@ main {
     flex-direction: row;
 }
 
-.menu-top .menu{
+.menu-top .menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 34px;
 }
 
-.menu-top .menu li a{
+.menu-top .menu li a {
     text-decoration: none;
 }
 
@@ -56,10 +53,12 @@ main {
 }
 
 #apresentacao {
+    background-color: var(--bg-color-primary);
     display: flex;
     min-height: 620px;
     padding: 72px 72px 72px 72px;
     align-items: center;
+    justify-content: space-between;
     gap: 72px;
 }
 
@@ -87,7 +86,48 @@ main {
     max-width: 520px;
 }
 
-#apresentacao .previa{
+#apresentacao .cta .final-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#apresentacao .cta .final-cta .info-final-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#apresentacao .cta .final-cta .botao-final-cta {
+    display: flex;
+    height: 52px;
+    padding: 0 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999px;
+    border: 1px solid #FF65C3;
+    background: #FF65C3;
+}
+
+#apresentacao .cta .final-cta .botao-final-cta a {
+    text-decoration: none;
+}
+
+#apresentacao .cta .final-cta .botao-final-cta a strong {
+    color: #0D0125;
+}
+
+#apresentacao .cta .final-cta .info-final-cta p {
+    color: #C8BAD6;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    max-width: 120px;
+}
+
+#apresentacao .previa {
     display: flex;
     flex-direction: column;
     background-color: var(--font-color-primary);
@@ -113,7 +153,190 @@ main {
     align-items: center;
 }
 
-#apresentacao .previa .top .identificacao .user{
+#apresentacao .previa .top .identificacao .user {
     color: #6D6274;
+    font-family: Inter;
     font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#apresentacao .resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bg-color-primary);
+    padding: 20px;
+    border-radius: 24px;
+}
+
+#apresentacao .resumo .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#apresentacao .resumo .informacoes p {
+    color: var(--font-color-secundary);
+    font-size: 11px;
+}
+
+#apresentacao .resumo .informacoes h2 {
+    color: var(--font-color-primary);
+}
+
+#apresentacao .resumo .trending {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 999px;
+    background: rgba(110, 222, 174, 0.13);
+    padding: 5px 9px;
+}
+
+#apresentacao .resumo .trending .icon-trending {
+    width: 12px;
+    height: 12px;
+}
+
+#apresentacao .resumo .trending .text-trending {
+    color: #6EDEAE;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    line-height: normal;
+}
+
+#apresentacao .evolucao {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 16px 16px 12px 16px;
+    gap: 9px;
+    border-radius: 24px;
+    border: 1px solid #E7D7C2;
+    background: #ffffff
+}
+
+#apresentacao .evolucao .temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#apresentacao .evolucao .titulo-evolucao {
+    color: #180C28;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#apresentacao .evolucao .info-evolucao {
+    color: #6D6274;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#apresentacao .evolucao .trending-evolucao P {
+    color: #BB3186;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#beneficios {
+    display: flex;
+    padding: 74px 72px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38px;
+    align-self: stretch;
+    background: #FAEBD6;
+}
+
+#beneficios .selo {
+    display: flex;
+    padding: 7px 12px;
+    align-items: center;
+    gap: 7px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 101, 195, 0.30);
+    background: rgba(255, 101, 195, 0.10);
+}
+
+#beneficios .selo p {
+    color: #BB3186;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: undefined;
+    text-transform: uppercase;
+}
+
+#beneficios .titulo h2 {
+    color: #180C28;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    max-width: 550px;
+}
+
+#beneficios .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    width: 100%;
+}
+
+#beneficios .grid .grid-bloco {
+    display: flex;
+    padding: 26px;
+    height: 248px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border-radius: 24px;
+    border: 1px solid #E7D7C2;
+    background: #FFF8EE;
+}
+
+#beneficios .grid .grid-bloco .top-grid-bloco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+#beneficios .grid .grid-bloco .top-grid-bloco p {
+    color: #BB3186;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#beneficios .grid .grid-bloco h4 {
+    color: #180C28;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#beneficios .grid .grid-bloco p {
+    color: #6D6274;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%;
+    max-width: 350px;
 }
