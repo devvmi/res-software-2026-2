@@ -10,8 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
-    color: var(--font-color-primary);
 }
 
 header {
@@ -24,11 +22,22 @@ header {
     justify-content: space-between;
 }
 
+body {
+    font-family: Inter, sans-serif;
+    color: var(--font-color-primary);
+}
+
 .logo {
     display: flex;
     gap: 12px;
     margin: 22.65px 0px 22.65px 0px;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-logo img {
+    height: 100%;
 }
 
 .menu-top .menu {
@@ -38,7 +47,8 @@ header {
     gap: 34px;
 }
 
-.menu-top .menu li a {
+.menu li a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -49,6 +59,7 @@ header {
 }
 
 .acesso a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -62,46 +73,46 @@ header {
     gap: 72px;
 }
 
-#apresentacao .cta {
+.cta {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-#apresentacao .cta h2 {
+.cta h2 {
     font-size: 64px;
     line-height: 104%;
     font-weight: 400;
     text-wrap: balance;
 }
 
-#apresentacao .cta h2 span {
+.cta h2 span {
     color: #FF65C3;
 }
 
-#apresentacao .cta p {
+.cta p {
     color: #c9c3e0;
     line-height: 1.5;
     max-width: 520px;
 }
 
-#apresentacao .cta .final-cta {
+.cta .final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#apresentacao .cta .final-cta .info-final-cta {
+.final-cta .info-final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#apresentacao .cta .final-cta .botao-final-cta {
+.final-cta .botao-final-cta {
     display: flex;
     height: 52px;
-    padding: 0 22px;
+    padding: 22px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -110,7 +121,7 @@ header {
     background: #FF65C3;
 }
 
-#apresentacao .cta .final-cta .botao-final-cta a {
+.botao-final-cta a {
     text-decoration: none;
 }
 
@@ -137,10 +148,6 @@ header {
     border-radius: 32px;
 }
 
-#apresentacao .previa * {
-    color: var(--bg-color-primary);
-}
-
 #apresentacao .previa .top {
     display: flex;
     align-items: center;
@@ -160,6 +167,15 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.grafico img{
+    width: 100%;
+    max-width: 390px;
+}
+
+.saudacao p {
+    color: #180C28;;
 }
 
 #apresentacao .resumo {
@@ -242,7 +258,7 @@ header {
     line-height: normal;
 }
 
-#apresentacao .evolucao .trending-evolucao P {
+#apresentacao .evolucao .trending-evolucao p {
     color: #BB3186;
     font-size: 13px;
     font-style: normal;
@@ -276,7 +292,6 @@ header {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: undefined;
     text-transform: uppercase;
 }
 
@@ -339,4 +354,105 @@ header {
     font-weight: 400;
     line-height: 155%;
     max-width: 350px;
+}
+
+/* Imagens nunca passam do tamanho do container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Tablet (até 1024px) ---------- */
+@media (max-width: 1024px) {
+  header,
+  #apresentacao,
+  #beneficios {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #apresentacao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    min-height: auto;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  #apresentacao .cta {
+    max-width: 100%;
+  }
+
+  #apresentacao .cta h2 {
+    font-size: 52px;
+  }
+
+  #apresentacao .previa {
+    min-width: 0;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  #beneficios .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Celular (até 768px) ---------- */
+@media (max-width: 768px) {
+  header,
+  #apresentacao,
+  #beneficios {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .menu-top {
+    display: none; /* ver nota sobre menu hambúrguer abaixo */
+  }
+
+  #apresentacao {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 36px;
+  }
+
+  #apresentacao .cta h2 {
+    font-size: 38px;
+  }
+
+  #apresentacao .cta .final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  #apresentacao .previa {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  #beneficios {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  #beneficios .titulo h2 {
+    font-size: 28px;
+  }
+
+  #beneficios .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #beneficios .grid .grid-bloco {
+    height: auto;
+    min-height: 200px;
+  }
 }
